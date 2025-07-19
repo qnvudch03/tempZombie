@@ -75,6 +75,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 zombieshooting/Library/
-zombieshooting/Assets/
 
 # End of https://www.toptal.com/developers/gitignore/api/unity

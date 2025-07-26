@@ -75,12 +75,13 @@ public class Gun : MonoBehaviour {
 
         if(Physics.Raycast(fireTransform.position, fireTransform.forward, out raycastHit, fireDistance))
         {
-            MyDamageableInferface hittedactor = raycastHit.collider.GetComponent<MyDamageableInferface>();
+            IDamageable hittedactor = raycastHit.collider.GetComponent<IDamageable>();
+            //MyDamageableInferface
 
             if(hittedactor != null)
             {
                 //hittedactor.Ondamaged(gunData.damage,raycastHit.point ,fireTransform.forward);
-                hittedactor.Ondamaged(gunData.damage, raycastHit.point, raycastHit.normal);
+                hittedactor.OnDamage(gunData.damage, raycastHit.point, raycastHit.normal);
             }
 
             hitPosition = raycastHit.point;
